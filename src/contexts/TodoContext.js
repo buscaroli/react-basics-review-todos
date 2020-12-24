@@ -19,7 +19,6 @@ const TodoContextProvider = (props) => {
       { props.children }
     </TodoContext.Provider>
   )
-  
 }
 
 export default TodoContextProvider

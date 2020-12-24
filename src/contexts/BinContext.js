@@ -13,8 +13,6 @@ const BinContextProvider = (props) => {
     setDiscarded(discarded.filter(card => id !== card.id))
   }
 
-  
-
   return(
     <BinContext.Provider value={{ discarded, addToBin, deleteNote }}>
       { props.children }
