@@ -7,9 +7,11 @@ import NoteForm from './NoteForm'
 import Titles from './Titles'
 import Header from './Header'
 
+
+
 function App() {
   return (
-    <div style={{background: 'lightgrey'}}>  
+    <div className='mainAppContainer' style={{background: 'lightgrey', height: '100%', minHeight: '100vh'}}>  
       <Header text='The TODO App with Context'/>
       
       <TodoContextProvider>  

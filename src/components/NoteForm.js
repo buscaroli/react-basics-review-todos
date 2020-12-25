@@ -38,7 +38,7 @@ function NoteForm({firstField, secondField, buttonText}) {
           />
         </div>
         <button 
-          className="ui inverted large button" 
+          className="ui basic inverted large button" 
           type="submit">{buttonText}</button>
       </form>
   )

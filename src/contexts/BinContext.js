@@ -6,7 +6,7 @@ const BinContextProvider = (props) => {
   const [discarded, setDiscarded] = useState([])
 
   const addToBin = (title, body, id) => {
-    setDiscarded([...discarded, {title, body, id}])
+    setDiscarded([{title, body, id}, ...discarded])
   }
   
   const deleteNote = id => {

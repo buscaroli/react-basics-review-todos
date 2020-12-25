@@ -7,7 +7,7 @@ const TodoContextProvider = (props) => {
   const [todos, setTodos] = useState([])
 
   const addTodo = (title, body, id=uuid()) => {
-    setTodos([...todos, {title, body, id }])
+    setTodos([{title, body, id }, ...todos])
   }
 
   const removeTodo = (id) => {
