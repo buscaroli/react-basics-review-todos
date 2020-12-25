@@ -14,4 +14,6 @@ Focus on implementing the functionality, basic styling and unpolished.
 ..* useState, useContext, useEffect
 * How to use two Contexts one inside the other
 * How to use localStorage to persist data in the Browser in between sessions
+* Used uuid to associate a unique key to each item in a list
+..* It's important to create the ID while adding the item in the list and NOT when rendering the list with Map; this would associate the same item with different keys at each render which leads to a decrease in performance
 * (Poorly) Styled with semantic-ui-css
