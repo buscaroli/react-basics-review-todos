@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 
 export const BinContext = createContext()
 
@@ -12,6 +12,16 @@ const BinContextProvider = (props) => {
   const deleteNote = id => {
     setDiscarded(discarded.filter(card => id !== card.id))
   }
+
+  useEffect(() => {
+    const localData = localStorage.getItem('discarded_list')
+    localData ? setDiscarded(JSON.parse(localData)) : setDiscarded([])
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('discarded_list', JSON.stringify(discarded))
+    
+  }, [discarded])
 
   return(
     <BinContext.Provider value={{ discarded, addToBin, deleteNote }}>

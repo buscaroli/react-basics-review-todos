@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { TodoContext } from '../contexts/TodoContext'
 
-function NoteForm() {
+function NoteForm({firstField, secondField, buttonText}) {
   const [text, setText] = useState('')
   const [textarea, setTextarea] = useState('')
   const { addTodo } = useContext(TodoContext)
@@ -17,26 +17,29 @@ function NoteForm() {
   return (
       <form
         onSubmit={onSubmitHandle} 
-        className="ui large purple inverted form segment">
+        className="ui large inverted form segment">
         <div className="field">
           <input
             onChange={e => setText(e.target.value)} 
             value={text} 
+            placeholder={firstField}
             type="text" 
             name="title" 
-            placeholder="Title"/>
+            required
+          />
         </div>
         <div className="field">
           <textarea 
             onChange={e => setTextarea(e.target.value)}
             value={textarea} 
+            placeholder={secondField}
             name="description"
             rows='3' 
-            placeholder="Description"/>
+          />
         </div>
         <button 
           className="ui inverted large button" 
-          type="submit">Done!</button>
+          type="submit">{buttonText}</button>
       </form>
   )
 }

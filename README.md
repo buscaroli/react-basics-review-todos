@@ -11,6 +11,7 @@ Focus on implementing the functionality, basic styling and unpolished.
 
 * React Context
 * React Hooks
-* useState, useContext
+..* useState, useContext, useEffect
 * How to use two Contexts one inside the other
-* Styled with seantic-ui-css
+* How to use localStorage to persist data in the Browser in between sessions
+* (Poorly) Styled with semantic-ui-css

@@ -15,9 +15,9 @@ function TodoCard({title, body, id}) {
 
   return (
     <div className='ui cards'>
-    <div key={ id } className="card">
+    <div key={ id } className="ui fluid card">
       <div className="content">
-        <h3 className="center aligned large sub header">
+        <h3 className="ui inverted green segment center aligned large header">
           { title }
         </h3>
         <h4 className="description">

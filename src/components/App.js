@@ -4,49 +4,28 @@ import TodoContextProvider from '../contexts/TodoContext'
 import BinContextProvider from '../contexts/BinContext'
 import BinList from './BinList'
 import NoteForm from './NoteForm'
+import Titles from './Titles'
+import Header from './Header'
 
 function App() {
   return (
-    <div>  
-      <div
-        style={{marginBottom: '30px'}} 
-        className='ui segment bottom purple attached inverted very padded'>
-        <h1 className='ui centered huge header'
-      >
-          The TO-DO App with Context
-        </h1>     
-      </div >
-      <TodoContextProvider>
-        
+    <div style={{background: 'lightgrey'}}>  
+      <Header text='The TODO App with Context'/>
+      
+      <TodoContextProvider>  
         <div
           style={{marginBottom: '30px'}} 
           className='ui container'>
-          <NoteForm />
+          <NoteForm firstField='Title' secondField='Description' buttonText='Done!'/>
         </div>
 
-        <div className='ui grid container'>
-          <div className='ten wide column'>
-            <div className='ui inverted segment purple'>
-              <h2 className='ui inverted header centered'>
-                TODOs
-              </h2>
-            </div>
-          </div>
-
-          <div className='six wide column'>
-            <div className='ui inverted segment purple'>
-              <h2 className='ui inverted header centered'>
-                BIN
-              </h2>
-            </div>
-          </div>
-        </div>
+        <Titles firstTitle='TO-DO' secondTitle='To Bin'/>
 
         <div className='ui container'>
           <div className='ui grid container'>
             <BinContextProvider>  
               
-              <div className='ten wide column'>        
+              <div className='ten wide column'> 
                 <TodoList />
               </div>
              

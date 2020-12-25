@@ -22,9 +22,9 @@ function BinCard({ title, body, id }) {
   return (
     <div>
       <div className='ui cards'>
-        <div key={ id } className="card">
+        <div key={ id } className="ui fluid card">
           <div className="content">
-            <h3 className="center aligned large sub header">
+            <h3 className="ui inverted red segment center aligned large sub header">
               { title }
             </h3>
             <h4 className="description">
@@ -35,12 +35,12 @@ function BinCard({ title, body, id }) {
           <div className="ui two buttons">
             <div
               onClick={handleRecover} 
-              className="ui basic green button">
+              className="ui inverted green button">
               Recover
             </div>
             <div
               onClick={handleDelete} 
-              className="ui basic red button">
+              className="ui inverted red button">
               Delete
             </div>
           </div>
